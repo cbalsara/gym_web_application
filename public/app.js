@@ -11,6 +11,7 @@ var app = function(){
 
   var button = document.getElementById('save-Button');
   button.onclick = handleSaveButtonClick;
+  var saved = localStorage.getItem('selection');
 };
 
 // -----------------------------------------------------------------
@@ -27,8 +28,19 @@ var handleSelectRepChange = function(){
 
 var handleSaveButtonClick = function(){
   var saveClick = document.getElementById('save-Text-Result')
-  saveClick.innerText = 'Exercise has been saved!';
+  saveClick.innerText = 'Save Button Clicked!';
+
+  localStorage.setItem('selection', saveClick.value)
+  saveClick.value = "";
 }
+
+
+
+// When, I click the save button, I want all the information to be saved into local Storage.
+
+// so far it is saving a blank object
+
+
 
 
 
