@@ -6,11 +6,17 @@ var app = function(){
   var selectBox1 = document.getElementById('firstSelect');
   selectBox1.onchange = handleSelectSetChange;
 
-  
+  var selectBox2 = document.getElementById('secondSelect');
+  selectBox2.onchange = handleSelectRepChange;
 };
 
 var handleSelectSetChange = function(){
   var newOption = document.getElementById('set-result');
+  newOption.innerText = this.value;
+}
+
+var handleSelectRepChange = function(){
+  var newOption = document.getElementById('rep-result');
   newOption.innerText = this.value;
 }
 
