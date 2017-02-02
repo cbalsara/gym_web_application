@@ -10,30 +10,48 @@ var app = function(){
   var selectBox2 = document.getElementById('rep-select');
   selectBox2.onchange = handleSelectRepChange;
 
-  var button = document.getElementById('save-button');
-  button.onclick = handleSaveButtonClick;
-  var saved = localStorage.getItem('exercise');
+  var button = document.getElementById('add-workout');
+  button.onclick = createWorkout;
 
+  // var workout = function(name, weight, set, rep){
+  //   var name = createName(name);
+  //   var weight = createWeight(weight);
+  //   var set = createSet(set);
+  //   var rep = createRep(rep);
+  // }
+ 
 };
 
 // -----------------------------------------------------------------
 
-var handleSelectSetChange = function(){
+// var createName = function(name){
+//   var exName = document.getElementById('added-result');
+//   exName.innerText = name
+//   return exName;
+// }; 
+
+var createWorkout = function(set, rep){
+  var setList = handleSelectSetChange;
+  var repList = handleSelectRepChange;
+}
+
+var handleSelectSetChange = function(set){
   var newOption = document.getElementById('set-result');
   newOption.innerText = this.value + ' Sets';
 }
 
-var handleSelectRepChange = function(){
+var handleSelectRepChange = function(rep){
   var newOption = document.getElementById('rep-result');
   newOption.innerText = this.value + ' Reps';
 }
 
-var handleSaveButtonClick = function(){
-  var saveClick = document.getElementById('save-result');
-  saveClick.innerText = "button clicked to save";
-  localStorage.setItem('exercise', saveClick.value);
-  saveClick.value = "";
-};
+
+// var handleAddWorkoutButtonClick = function(){
+//   var saveSetClick = document.getElementById('set-result');
+//   var saveRepClick = document.getElementById('rep-result');
+//   saveSetClick.innerText = handleSelectSetChange();
+//   saveRepClick.innerText = handleSelectRepChange();
+// };
 
 
 
