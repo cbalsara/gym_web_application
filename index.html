@@ -14,15 +14,15 @@
   </header>
 
   <main>
-    <p id="firstP">Information on Frist Page Here </p>
+    <p id="firstP">Information on First Page Here </p>
   </main>
 
   <fieldset>
   <legend>Exercise Creation</legend>
   Type: <input type="text"><br>
-  Weight: <input type="text"><br>
+  Weight: <input type="text"> kg<br>
   
-  <select id='first-Select'> 
+  <select id='set-select'> 
   <option disabled> Choose Your Number of Sets </option>
   <option>1</option>
   <option>2</option>
@@ -30,7 +30,7 @@
   <option>4</option>
   </select>
 
-  <select id='second-Select'>  
+  <select id='rep-select'>  
   <option disabled> Choose Your Number of Reps </option>
   <option>10</option>
   <option>15</option>
@@ -38,12 +38,15 @@
   </select>
   </fieldset>
 
+  <button id="add-workout">Click To Add</button>
+
   <p id='set-result'> Show Chosen Sets Here!</p>
 
   <p id='rep-result'> Show Chosen Reps Here!</p>
 
-  <button id="save-Button">Save</button>
-  <p id='save-Text-Result'> Nothing has been entered to save</p>
+  <button id="save-button">Save</button>
+
+  <p id='save-result'> Nothing has been entered to save</p>
 
 </body>
 
