@@ -10,8 +10,9 @@ var app = function(){
   var selectBox2 = document.getElementById('rep-select');
   selectBox2.onchange = handleSelectRepChange;
 
-  var button = document.getElementById('add-workout');
+  var button = document.getElementById('add-workout');  
   button.onclick = createWorkout;
+
 
   // var workout = function(name, weight, set, rep){
   //   var name = createName(name);
@@ -31,18 +32,24 @@ var app = function(){
 // }; 
 
 var createWorkout = function(set, rep){
-  var setList = handleSelectSetChange;
-  var repList = handleSelectRepChange;
+  var setList = handleSelectSetChange(set);
+  var repList = handleSelectRepChange(rep);
 }
 
 var handleSelectSetChange = function(set){
-  var newOption = document.getElementById('set-result');
-  newOption.innerText = this.value + ' Sets';
+  var option1 = document.createElement('ul');
+  option1.innerText = set + ' Sets';
+
+  var a = document.getElementById('added-result');
+  a.appendChild(option1);
 }
 
 var handleSelectRepChange = function(rep){
-  var newOption = document.getElementById('rep-result');
-  newOption.innerText = this.value + ' Reps';
+  var option2 = document.createElement('ul');
+  option2.innerText = rep + ' Reps';
+
+  var a = document.getElementById('added-result');
+  a.appendChild(option2); 
 }
 
 
