@@ -18,6 +18,7 @@ var app = function(){
 
 var createWorkout = function(name, weight, set, rep){
   var addName = handleInputExerciseName(name);
+  var addWeight = handleInputExerciseWeight(weight);
   var setList = handleSelectSetChange(set);
   var repList = handleSelectRepChange(rep);
 }
@@ -27,6 +28,13 @@ var handleInputExerciseName = function(name){
   selected.innerText = 'Name' + name;
   var a = document.getElementById('added-result');
   a.appendChild(selected); 
+}
+
+var handleInputExerciseWeight = function(weight){
+  var selected2 = document.createElement('ul');
+  selected2.innerText = weight + ' :kg';
+  var a = document.getElementById('added-result');
+  a.appendChild(selected2);
 }
 
 var handleSelectSetChange = function(set){
